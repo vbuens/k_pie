@@ -19,14 +19,14 @@ sklearn==0.0\
 utils==0.9.0\
 webcolors==1.8.1\\
 
-If you get the following error from matplotlib:
- `ValueError: Format "jpg" is not supported.`
- Create the file in ~/.matplotlib/matplotlibrc with the following line in it:
- `backend: TkAgg`
+If you get the following error from matplotlib:\
+ `ValueError: Format "jpg" is not supported.`\
+ Create the file in ~/.matplotlib/matplotlibrc with the following line in it:\
+ `backend: TkAgg`\
 
 
 ## Usage
 
-`python perc_infection.py -o output-dir/ -i input-dir -p infected.jpg -n healthy.jpg -k 5 `
--k = 5 (by default)
+`python perc_infection.py -o output-dir/ -i input-dir -p infected.jpg -n healthy.jpg -k 5 `\
+-k = 5 (by default)\
 -o = results (by default)
