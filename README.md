@@ -27,6 +27,6 @@ If you get the following error from matplotlib:\
 
 ## Usage
 
-`python perc_infection.py -o output-dir/ -i input-dir -p infected.jpg -n healthy.jpg -k 5 `\
+`python k_pie.py -o output-dir/ -i input-dir -p infected.jpg -n healthy.jpg -k 5 `\
 -k = 5 (by default)\
 -o = results (by default)
