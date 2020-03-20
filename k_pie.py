@@ -20,15 +20,15 @@ def main(args):
     n_rgb = args.negativeRGBvalues
     K = args.k #number of colours
 
-    # Writing output file
-    output_file = str(output_dir)+"/infection_percentages.csv"
-    output = open(output_file, "a")
-    output.write("Image,K,%Infection")
-
     # Finding standard values
     inf_values,healthy_values=checkpoint(input_dir,output_dir,healthy,n_rgb,infected,p_rgb,K)
     print('Healthy RGB value: (%s)\nInfected RGB value: (%s)\n' % (str(healthy_values).strip('[]'),str(inf_values).strip('[]')))
 
+    # Writing output file
+    output_file = str(output_dir)+"/infection_percentages.csv"
+    output = open(output_file, "a")
+    output.write("Image,K,%Infection")
+    
     for imagefile in glob.glob(str(input_dir)+"/*"+str(format)):
         image = get_image(imagefile)
         print("- File : %s " % imagefile)
