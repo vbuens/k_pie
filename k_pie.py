@@ -7,7 +7,7 @@ import glob
 import webcolors
 import numpy as np
 import matplotlib.pyplot as plt
-from infection_functions import get_image,color_name,print_image, get_threshold_values, closest_colour, get_threshold_value
+from infection_functions import get_image,color_name,print_image, get_threshold_values, closest_colour
 
 
 def main(args):
@@ -141,7 +141,7 @@ def checkpoint(input_dir,output_dir,healthy,n_rgb,infected,p_rgb,K):
             open(healthy, 'r')
         except FileNotFoundError:
             parser.error("File %s not found" % healthy)
-        healthy_values = get_threshold_value(healthy,K,output_dir)
+        healthy_values = get_threshold_values(healthy,K,output_dir)
 
     elif n_rgb:
         rgbvalues=n_rgb.split(',')
@@ -152,7 +152,7 @@ def checkpoint(input_dir,output_dir,healthy,n_rgb,infected,p_rgb,K):
             open(infected, 'r')
         except FileNotFoundError:
             parser.error("File %s not found" % infected)
-        infected_values = get_threshold_value(infected,K,output_dir)
+        infected_values = get_threshold_values(infected,K,output_dir)
     elif p_rgb:
         rgbvalues=p_rgb.split(',')
         infected_values =[int(i) for i in rgbvalues]    #sys.stdout = open('stdout.txt', 'w')
