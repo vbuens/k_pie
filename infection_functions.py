@@ -39,7 +39,7 @@ def print_image(imagefile,image,center_colours,labels,k,output_dir):
     plt.savefig('%s/%s_%i_kmeans.pdf' % (output_dir,os.path.splitext(os.path.basename(imagefile))[0],k))
     plt.clf()
 
-def get_threshold_value(control,K,output_dir):
+def get_threshold_values(control,K,output_dir):
     ## Getting the healthy and infected thresholds
     plt.rcParams['figure.figsize'] = [14, 7]
     image = get_image(control)
